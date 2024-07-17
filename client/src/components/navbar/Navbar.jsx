@@ -38,8 +38,8 @@ function Navbar() {
           </div>
         ) : (
           <>
-            <a href="/login">Sign in</a>
-            <a href="/register" className="register">
+            <a href="https://estate-hub-1.onrender.com/login">Sign in</a>
+            <a href="https://estate-hub-1.onrender.com/register" className="register">
               Sign up
             </a>
           </>
