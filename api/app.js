@@ -7,9 +7,17 @@ import testRoute from "./routes/test.route.js";
 import userRoute from "./routes/user.route.js";
 import chatRoute from "./routes/chat.route.js";
 import messageRoute from "./routes/message.route.js";
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 
 const app = express();
 
+// Resolve __dirname for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve static files from the React app
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
