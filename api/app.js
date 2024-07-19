@@ -24,7 +24,7 @@ app.use("/api/chats", chatRoute);
 app.use("/api/messages", messageRoute);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 });
 
 app.listen(8800, () => {
